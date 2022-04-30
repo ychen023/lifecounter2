@@ -28,6 +28,9 @@ class PlayViewController: UIViewController, UITextFieldDelegate, CustomCellUpdat
     @IBOutlet weak var resetButton: UIButton!
     
     
+    let numberToolbar: UIToolbar = UIToolbar()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,20 +38,44 @@ class PlayViewController: UIViewController, UITextFieldDelegate, CustomCellUpdat
         tableView.delegate = self
         tableView.dataSource = self
         inputScore.delegate = self
+        
+        numberToolbar.barStyle = UIBarStyle.default
+           numberToolbar.items=[
+            UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.boopla)),
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: self, action: nil),
+            UIBarButtonItem(title: "Apply", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.hoopla))
+           ]
+
+            numberToolbar.sizeToFit()
+        inputScore.inputAccessoryView = numberToolbar
+
+    }
+    
+    @objc func boopla () {
+        inputScore.resignFirstResponder()
+    }
+
+    @objc func hoopla () {
+        if let text = inputScore.text {
+            for player in allPlayers {
+                player.value = Int(text)!
+            }
+        }
+        inputScore.resignFirstResponder()
     }
     
     func updateViews() {
         tableView.reloadData()
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let text = inputScore.text {
-            for player in allPlayers {
-                player.value = Int(text)!
-            }
-        }
-        return true
-    }
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        if let text = inputScore.text {
+//            for player in allPlayers {
+//                player.value = Int(text)!
+//            }
+//        }
+//        return true
+//    }
 
     @IBAction func resetTouched(_ sender: Any) {
         history = []
