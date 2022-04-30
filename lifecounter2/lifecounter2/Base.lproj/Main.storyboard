@@ -60,7 +60,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="SmQ-qt-izY">
-                                <rect key="frame" x="239" y="112" width="39" height="34"/>
+                                <rect key="frame" x="209" y="112" width="39" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="39" id="SPm-Bp-cMC"/>
                                     <constraint firstAttribute="height" constant="34" id="ssW-an-f8P"/>
@@ -81,7 +81,7 @@
                                     <action selector="addPlayerTouched:" destination="ySy-Z5-eiE" eventType="touchUpInside" id="eBJ-uA-Xq1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add/remove life amount: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXI-rd-tqy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add/remove score " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXI-rd-tqy">
                                 <rect key="frame" x="20" y="119" width="190" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="cgx-uM-KgW"/>
@@ -96,14 +96,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="102-HD-uQu" customClass="TableViewCell" customModule="lifecounter2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="102-HD-uQu" id="AzC-ky-ahl">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaH-Sh-LgI">
-                                                    <rect key="frame" x="20" y="10" width="62.5" height="21"/>
+                                                    <rect key="frame" x="20" y="10" width="62.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -171,14 +171,13 @@
                             <constraint firstItem="h9Q-yT-rjS" firstAttribute="leading" secondItem="m7n-Ie-1E8" secondAttribute="leading" id="92H-zT-ESl"/>
                             <constraint firstItem="0dF-OE-xy7" firstAttribute="top" secondItem="m7n-Ie-1E8" secondAttribute="top" constant="12" id="9nP-6K-5fg"/>
                             <constraint firstItem="FSX-Dh-Scr" firstAttribute="leading" secondItem="m7n-Ie-1E8" secondAttribute="leading" constant="8" id="H7g-yq-bxS"/>
-                            <constraint firstItem="SmQ-qt-izY" firstAttribute="leading" secondItem="LXI-rd-tqy" secondAttribute="trailing" constant="29" id="Jvb-9n-7ag"/>
+                            <constraint firstItem="SmQ-qt-izY" firstAttribute="leading" secondItem="LXI-rd-tqy" secondAttribute="trailing" constant="-1" id="Jvb-9n-7ag"/>
                             <constraint firstItem="h9Q-yT-rjS" firstAttribute="bottom" secondItem="m7n-Ie-1E8" secondAttribute="bottom" id="P2E-aS-hv6"/>
                             <constraint firstItem="LXI-rd-tqy" firstAttribute="leading" secondItem="m7n-Ie-1E8" secondAttribute="leading" constant="20" id="PLN-Rb-7WH"/>
                             <constraint firstItem="h9Q-yT-rjS" firstAttribute="top" secondItem="SmQ-qt-izY" secondAttribute="bottom" constant="34" id="WmE-Lf-pGN"/>
                             <constraint firstItem="m7n-Ie-1E8" firstAttribute="trailing" secondItem="0dF-OE-xy7" secondAttribute="trailing" constant="8" id="cw9-YW-Fhg"/>
                             <constraint firstItem="LXI-rd-tqy" firstAttribute="top" secondItem="m7n-Ie-1E8" secondAttribute="top" constant="75" id="pzJ-co-Nip"/>
                             <constraint firstItem="SmQ-qt-izY" firstAttribute="top" secondItem="m7n-Ie-1E8" secondAttribute="top" constant="68" id="rPe-2L-RUY"/>
-                            <constraint firstItem="m7n-Ie-1E8" firstAttribute="trailing" secondItem="SmQ-qt-izY" secondAttribute="trailing" constant="136" id="rqp-Jh-DbS"/>
                             <constraint firstItem="0dF-OE-xy7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m7n-Ie-1E8" secondAttribute="leading" symbolic="YES" id="t2e-0Y-fZB"/>
                             <constraint firstItem="h9Q-yT-rjS" firstAttribute="trailing" secondItem="m7n-Ie-1E8" secondAttribute="trailing" id="uYB-rE-OfK"/>
                             <constraint firstItem="FSX-Dh-Scr" firstAttribute="top" secondItem="m7n-Ie-1E8" secondAttribute="top" constant="12" id="wyu-L7-st8"/>
